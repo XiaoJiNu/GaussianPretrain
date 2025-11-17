@@ -5,7 +5,7 @@ from typing import Any, Generator, Iterator, Optional, Tuple, Union
 from pathlib import Path
 import pdb
 import os
-import tensorflow as tf
+# import tensorflow as tf  # Not used in this file
 from abc import ABCMeta, abstractmethod
 from contextlib import contextmanager
 import tempfile
@@ -519,14 +519,10 @@ class HardDiskBackend(BaseStorageBackend):
 
 
 from easydict import EasyDict
+# Changed from PetrelBackend to HardDiskBackend for local file access
 BACKEND = EasyDict({
-    'NAME': 'PetrelBackend',
-    'KWARGS': {
-        'path_mapping': {
-            './data/waymo/': 's3://openmmlab/datasets/detection3d/waymo/',
-            'data/waymo/': 's3://openmmlab/datasets/detection3d/waymo/'
-        }
-    }
+    'NAME': 'HardDiskBackend',
+    'KWARGS': {}
 })
 client = globals()[BACKEND.NAME](
     **BACKEND.get('KWARGS', {})
