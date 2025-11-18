@@ -8,6 +8,5 @@ __pycache__/
 .idea
 checkpoints
 build
-mmdet3d
 mmdet3d.egg-info
 data

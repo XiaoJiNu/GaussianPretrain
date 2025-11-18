@@ -208,7 +208,6 @@ class Uni3DVoxelPoolDepth(BaseModule):
                         frustum_range[i],
                         frustum_range[i + 3],
                         frustum_size[i],
-                        device="cuda",
                     )
                     for i in range(3)
                 ]
