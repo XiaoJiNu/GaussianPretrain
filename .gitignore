@@ -6,7 +6,7 @@ __pycache__/
 *.egg
 .cache
 .idea
-checkpoints
 build
-mmdet3d.egg-info
+checkpoints
 data
+mmdet3d.egg-info
